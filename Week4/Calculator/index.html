@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">🧮 ProCalc</div>
+            <div class="controls">
+                <button class="btn-lang" id="langBtn">EN | VN</button>
+                <button class="btn-theme" id="themeBtn">🌙</button>
+            </div>
+        </header>
+
+        <main class="calculator-wrapper">
+            <div class="display-panel">
+                <div class="display-history" id="history"></div>
+                <div class="display-main" id="display">0</div>
+            </div>
+
+            <div class="memory-panel">
+                <div class="memory-item">
+                    <span class="memory-label" data-en="Memory" data-vn="Bộ nhớ">Memory</span>
+                    <div class="memory-value" id="memoryValue">0</div>
+                </div>
+                <div class="memory-buttons">
+                    <button class="btn-mem" id="mcBtn" data-en="MC" data-vn="XN">MC</button>
+                    <button class="btn-mem" id="mrBtn" data-en="MR" data-vn="GN">MR</button>
+                    <button class="btn-mem" id="mpBtn" data-en="M+" data-vn="M+">M+</button>
+                    <button class="btn-mem" id="mmBtn" data-en="M-" data-vn="M-">M-</button>
+                </div>
+            </div>
+
+            <div class="buttons-grid">
+                <button class="btn btn-function" data-action="clear">AC</button>
+                <button class="btn btn-function" data-action="delete">DEL</button>
+                <button class="btn btn-function" data-action="percent">%</button>
+                <button class="btn btn-operator" data-operator="/">÷</button>
+
+                <button class="btn btn-number" data-number="7">7</button>
+                <button class="btn btn-number" data-number="8">8</button>
+                <button class="btn btn-number" data-number="9">9</button>
+                <button class="btn btn-operator" data-operator="*">×</button>
+
+                <button class="btn btn-number" data-number="4">4</button>
+                <button class="btn btn-number" data-number="5">5</button>
+                <button class="btn btn-number" data-number="6">6</button>
+                <button class="btn btn-operator" data-operator="-">−</button>
+
+                <button class="btn btn-number" data-number="1">1</button>
+                <button class="btn btn-number" data-number="2">2</button>
+                <button class="btn btn-number" data-number="3">3</button>
+                <button class="btn btn-operator" data-operator="+">+</button>
+
+                <button class="btn btn-number btn-zero" data-number="0">0</button>
+                <button class="btn btn-number" data-number=".">.</button>
+                <button class="btn btn-equals" data-action="equals">=</button>
+            </div>
+
+            <div class="history-panel">
+                <div class="history-header" data-en="Calculation History" data-vn="Lịch sử tính toán">Calculation History</div>
+                <div class="history-list" id="historyList"></div>
+                <button class="btn-clear-history" id="clearHistoryBtn" data-en="Clear History" data-vn="Xóa lịch sử">Clear History</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
